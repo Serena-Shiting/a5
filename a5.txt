@@ -1,0 +1,558 @@
+Script started on 2021-12-01 05:02:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="104" LINES="44"]
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ cd ..
+]0;lis@f6linux11: ~[01;32mlis@f6linux11[00m:[01;34m~[00m$ cd weka-3-8-5
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ export CLASSPATH=$CLASSPATH:`pwd`/weka.jar:`pwd`/libsvm.jar
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ cd a5
+bash: cd: a5: No such file or directory
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ cd /[K~/a5
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ java weka.core.converters.TextDirectoryLoader -dir data > data.arff 
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ head - 20 data.arff 
+==> standard input <==
+^C
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ head - 20 data.arff [1@n
+@relation _home_lis_a5_data
+
+@attribute text string
+@attribute @@class@@ {REVIEWS_UNHELPFUL,REVIEWS}
+
+@data
+
+'Thi book start  bang never let   Dick Franci  novel admittedly formulaic     winn formula sure  end   bit unrealistic   what?  life there   time be seriou  time lo yourself   excit story  interest main character \n',REVIEWS_UNHELPFUL
+' believe   fair  say  person get   book  trad  lot   ability  understand relate  read degree new information gel already consider   true  Hav said that    glad  allow - review  book  stop  purcha    interest   day trad -mini future  Other book  read relat  Elliott wave only provid minimal general guidance   only book  Elliott wave  found invaluable   took  few reading practice but  low behold   now  often  scrutinize  wave determine     impulse wave   correction  beauty    allow  know  still   correction   trend resum   allow  know  there  5th wave failure   form  correction  still develop   end   5th wave when market  spik  down  eventually tell   new thrust  direction  trend  part  trend possibly end  5th wave  whether   just  part   diagonal triangle    long way    master   often see  wave pattern appreciate  go    all  market make more sense   now  reviewer comment do  possible  intraday chart    disagree  Even small  wave take 30 minute  hour  develop  Once market made enough   move  recognize correction only ne  couple  minute  figure  even  consult book     short    impres consider best book  trad  ever read \n',REVIEWS
+' enjoy  well told yarn  intrigue told  skillfully able  predict end   really good who-done-   you \n',REVIEWS_UNHELPFUL
+' name indicate  book explain science behind Phillip Pullman  Dark Material trilogy  author refer  passage trilogy then explain science behind them u easily comprehendable example analogie  Chapter speak  everyth Northern Light  Amber Spyglas  non-fiction book   reference fictitiou Dark Material  science explain  though   complex   understood easily   lay reader  recommend read Dark Material trilogy  Phillip Pullman before read book  understand reference context  example given  book   really lik analogie because made science easy  understand  even those  understand  studi Physic  Chemistry  Astronomy behind many science fiction novel   especially enjoy depth  history author gave  different concept  such  explanation appearance  Northern Light  Whether look  understand Dark Material   better understand subject  science clas  book fulfill duty  explain science  Eventhough   usually enjoy science fiction   enjoy book educational value      \n',REVIEWS
+' read book first time   4th grade Tier 4 clas still remember  felt when  read last line  Chill went over  body   upset there wasn  more  book! Now  13 year later   still get chill  end  whole book  suspenseful myseteriou      just wonderful  sad th   seem  few people read    recommend EVERYONE read      light read  incredibly engag  Frank Bonham such  wonderfully creative mind!    funny brushe  very seriou subject  book  whole package! try Forever Formula  also  Bonham !\n',REVIEWS_UNHELPFUL
+' highly recommend get book  Just make sure purchase ISBN  0800757394  black cover yellow writ  other edition   modern    update    power  Bosworth  teach stripp  \n',REVIEWS
+'the book  good condition describe exactly  want  Thank you \n',REVIEWS_UNHELPFUL
+'Thi   great bible  preach - inclusive language - easy  read translation  that closely mirror NIV  soft cover allow   lie well  hand There  study aid  bible - except typical    weight measure    found  back  every bible However    fool  description - gett     leather bound    bible  even close Zondervan  own website tell TNIV bible    Italian Duo-tone    cover   these bible were Leather  say    Leather    What  Italian Duo-tone  ask? Good question  Write  email  Zondervan probably won  write back  truth  Italian Duo-tone  Zondervan  fancy way  say    rubber    Ye  rubber   actually  mixture  rubber polyester Italian Duo-tone  book binder version     naugohide     other word   man-made leather The sad th   pay  leather cover    very least  bond leather cover  gett manufactur imitation leather made proces polyester only look feel like leather \n',REVIEWS
+'Mountford  prose set vivid scene historical research  ponie  evident  skillfully weave history modern-day question  give   mystery keep  read  soon forgotten \n',REVIEWS_UNHELPFUL
+' only purchase book  rubber stamp  then   purchase    everyth  beginner need plu project  please  experienc stamper  There beautiful picture detail instruction    book  look forward  u over over again \n',REVIEWS
+'Thi  third volume   three-volume set    The Teaching  Kirpal Singh     set  excerpt other book reorganiz  topic such  meditation  diet  marriage etc  allow reader  research area  life   concern     The New Life    [volume 3] focuse  inner-spiritual life outer-worldly life carri  once  person embark onto spiritual path \n',REVIEWS_UNHELPFUL
+'What happen when  purple rotund hippontimu hiccup  fearce blast everyth everyone around him into flight? Humor  that  what Author illustrator Aaron Zenz present  whimsical rhyme  epic proportion  first children  picture book    The Hiccupontamu     Beautifully illustrat      Suess-like manner  story create many word send Daniel Webster reel    There  hippopotamusWho hiccupp quite--lotamusAnd every time  got emusHe  fall upon bottomu    Zenz render  humorou cartoon illustration u color pencil  u 119  all  Spr Lake  Michigan resident hold  art degree Hillsdale College     The Hiccupotamu    took eight year  complete  publish  Chicago-ba Dog  Hat Children  Publish The print quality  book  ultra-professional bring Zenz  pressure-appli pencil  vibrant life    often  competitive page quandary reader  love most; story  drawing  chemistry between text picture  remarkable  rival best children  book ever publish Aaron Zenz enjoy communicat kid  age through art lesson  home school children Sunday School classe  outreach  children only grow jewel   book \n',REVIEWS
+' haven  read  good book   long time Jada definitely quench urge  book kept  hook whole time  character were  easy  relate   entertain  Alexander add  little humor  make  more interest   can  wait second book!@\n',REVIEWS_UNHELPFUL
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ java -Xmx1024m weka.filters.unsupervised.attribute.StringToWordVector  -i data.arff -o data_training.arff -M 2
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by weka.core.WekaPackageClassLoaderManager (file:/home/lis/weka-3-8-5/weka.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of weka.core.WekaPackageClassLoaderManager
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ vi data_training.arffjava -Xmx1024m weka.filters.unsupervised.attribute.StringToWordVector  -i data.arff -o data_training.arff -M 2[Ahead -n 20 data.arff [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ 
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ 
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ 
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ 
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ 
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ 
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ 
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ cd ~/weka-3-8-5
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ ~/weka-3-8-5$ java -Xmx1024m  weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.trees.M5P -num-decimal-places 4  -t  ~/a5/data_training.arff -d data_training.model -c 1
+bash: /home/lis/weka-3-8-5$: No such file or directory
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ vi data_training.arff[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kjava -Xmx1024m  weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.trees.M5P -num-decimal-places 4  -t  ~/a5/data_training.arff -d data_training.model -c 1
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by weka.core.WekaPackageClassLoaderManager (file:/home/lis/weka-3-8-5/weka.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of weka.core.WekaPackageClassLoaderManager
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Dec 01, 2021 5:06:20 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+Dec 01, 2021 5:06:20 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Dec 01, 2021 5:06:20 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+Dec 01, 2021 5:06:20 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+
+Options: -W weka.classifiers.trees.M5P -num-decimal-places 4 
+
+=== Classifier model (full training set) ===
+
+Classification via Regression
+
+Classifier for class with index 0:
+
+M5 pruned model tree:
+(using smoothed linear models)
+LM1 (197/81.095%)
+
+LM num: 1
+@@class@@ = 
+	-0.1703 * - 
+	- 0.2435 * There 
+	+ 0.2715 * author 
+	- 0.2715 * before 
+	+ 0.3574 * best 
+	+ 0.2276 * character 
+	- 0.1824 * found 
+	+ 0.185 * good 
+	+ 0.1583 * just 
+	+ 0.1354 * life 
+	- 0.2105 * many 
+	- 0.2276 * only 
+	- 0.1882 * recommend 
+	- 0.2477 * should 
+	- 0.1819 * time 
+	- 0.2408 * work 
+	+ 0.6232
+
+Number of Rules : 1
+
+Classifier for class with index 1:
+
+M5 pruned model tree:
+(using smoothed linear models)
+LM1 (197/81.095%)
+
+LM num: 1
+@@class@@ = 
+	0.1703 * - 
+	+ 0.2435 * There 
+	- 0.2715 * author 
+	+ 0.2715 * before 
+	- 0.3574 * best 
+	- 0.2276 * character 
+	+ 0.1824 * found 
+	- 0.185 * good 
+	- 0.1583 * just 
+	- 0.1354 * life 
+	+ 0.2105 * many 
+	+ 0.2276 * only 
+	+ 0.1882 * recommend 
+	+ 0.2477 * should 
+	+ 0.1819 * time 
+	+ 0.2408 * work 
+	+ 0.3768
+
+Number of Rules : 1
+
+
+
+Time taken to build model: 2.43 seconds
+
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         153               77.665  %
+Incorrectly Classified Instances        44               22.335  %
+Kappa statistic                          0.5536
+Mean absolute error                      0.3423
+Root mean squared error                  0.3978
+Relative absolute error                 68.6033 %
+Root relative squared error             79.645  %
+Total Number of Instances              197     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.798    0.243    0.750      0.798    0.773      0.555    0.858     0.840     REVIEWS_UNHELPFUL
+                 0.757    0.202    0.804      0.757    0.780      0.555    0.858     0.867     REVIEWS
+Weighted Avg.    0.777    0.221    0.778      0.777    0.777      0.555    0.858     0.854     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 75 19 |  a = REVIEWS_UNHELPFUL
+ 25 78 |  b = REVIEWS
+
+Time taken to perform cross-validation: 13.97 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         113               57.3604 %
+Incorrectly Classified Instances        84               42.6396 %
+Kappa statistic                          0.1541
+Mean absolute error                      0.4393
+Root mean squared error                  0.5115
+Relative absolute error                 88.0203 %
+Root relative squared error            102.3782 %
+Total Number of Instances              197     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.670    0.515    0.543      0.670    0.600      0.158    0.611     0.583     REVIEWS_UNHELPFUL
+                 0.485    0.330    0.617      0.485    0.543      0.158    0.611     0.642     REVIEWS
+Weighted Avg.    0.574    0.418    0.582      0.574    0.570      0.158    0.611     0.614     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 63 31 |  a = REVIEWS_UNHELPFUL
+ 53 50 |  b = REVIEWS
+
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ 
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ 
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ 
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ 
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ 
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ 
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ 
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ 
+]0;lis@f6linux11: ~/weka-3-8-5[01;32mlis@f6linux11[00m:[01;34m~/weka-3-8-5[00m$ cd ~/a5
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ vi text_binary-classify.sh
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"text_binary-classify.sh" [New File][2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[2;1H[94m~                                                                                                       [3;1H~                                                                                                       [4;1H~                                                                                                       [5;1H~                                                                                                       [6;1H~                                                                                                       [7;1H~                                                                                                       [8;1H~                                                                                                       [9;1H~                                                                                                       [10;1H~                                                                                                       [11;1H~                                                                                                       [12;1H~                                                                                                       [13;1H~                                                                                                       [14;1H~                                                                                                       [15;1H~                                                                                                       [16;1H~                                                                                                       [17;1H~                                                                                                       [18;1H~                                                                                                       [19;1H~                                                                                                       [20;1H~                                                                                                       [21;1H~                                                                                                       [22;1H~                                                                                                       [23;1H~                                                                                                       [24;1H~                                                                                                       [25;1H~                                                                                                       [26;1H~                                                                                                       [27;1H~                                                                                                       [28;1H~                                                                                                       [29;1H~                                                                                                       [30;1H~                                                                                                       [31;1H~                                                                                                       [32;1H~                                                                                                       [33;1H~                                                                                                       [34;1H~                                                                                                       [35;1H~                                                                                                       [36;1H~                                                                                                       [37;1H~                                                                                                       [38;1H~                                                                                                       [39;1H~                                                                                                       [40;1H~                                                                                                       [41;1H~                                                                                                       [42;1H~                                                                                                       [43;1H~                                                                                                       [m[44;87H0,0-1[9CAll[1;1H[?25h[?25l[44;77Hi[1;1H[44;77H [1;1H[44;1H[1m-- INSERT --[m[44;13H[K[44;87H0,1[11CAll[1;1H[?25h[?25l[34m:[m[44;87H1,2[1;2H[?25h[?25lq[44;89H3[1;3H[?25h[?25l[2;1H[K[44;87H2,1[2;1H[?25h[?25l[94m~                                                                                                       [m[44;87H1,3[1;3H[?25h[?25l[1;2H[K[44;89H2[1;2H[?25h[?25l[1;1H[K[44;89H1[1;1H[?25h[44;1H[K[1;1H[?25l[44;77H^[[1;1H[44;77H  [1;1H[44;87H1,0-1[9CAll[1;1H[?25h[?25l[44;77H:[1;1H[44;77H[K[44;1H:[?2004h[?25hq[?25l[97m[41mE37: No write since last change (add ! to override)[?2004h[1;1H[m[44;87H1,0-1[9CAll[1;1H[?25h[?25l[44;77H:[1;1H[44;1H[K[44;1H:[?2004h[?25hq![?25l[?2004l[23;2t[23;1t[44;1H[K[44;1H[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ ls
+a5.txt     data_training.arff       data_without_tweet_training.arff  text_example_training.arff
+[0m[01;34mdata[0m       [01;34mdata_without_tweet[0m       [01;32mtext_binary_classify.sh[0m
+data.arff  data_without_tweet.arff  text_example.arff
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ vi [K[K[Klsvi text_binary-classify.sh
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"text_binary-classify.sh" [New File][2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[2;1H[94m~                                                                                                       [3;1H~                                                                                                       [4;1H~                                                                                                       [5;1H~                                                                                                       [6;1H~                                                                                                       [7;1H~                                                                                                       [8;1H~                                                                                                       [9;1H~                                                                                                       [10;1H~                                                                                                       [11;1H~                                                                                                       [12;1H~                                                                                                       [13;1H~                                                                                                       [14;1H~                                                                                                       [15;1H~                                                                                                       [16;1H~                                                                                                       [17;1H~                                                                                                       [18;1H~                                                                                                       [19;1H~                                                                                                       [20;1H~                                                                                                       [21;1H~                                                                                                       [22;1H~                                                                                                       [23;1H~                                                                                                       [24;1H~                                                                                                       [25;1H~                                                                                                       [26;1H~                                                                                                       [27;1H~                                                                                                       [28;1H~                                                                                                       [29;1H~                                                                                                       [30;1H~                                                                                                       [31;1H~                                                                                                       [32;1H~                                                                                                       [33;1H~                                                                                                       [34;1H~                                                                                                       [35;1H~                                                                                                       [36;1H~                                                                                                       [37;1H~                                                                                                       [38;1H~                                                                                                       [39;1H~                                                                                                       [40;1H~                                                                                                       [41;1H~                                                                                                       [42;1H~                                                                                                       [43;1H~                                                                                                       [m[44;87H0,0-1[9CAll[1;1H[?25h[?25l[44;77Hi[1;1H[44;77H [1;1H[44;1H[1m-- INSERT --[m[44;13H[K[44;87H0,1[11CAll[1;1H[?25h[?25l[34m#!/bin/bash
+#name: Shiting Li[m[2;18H[K[3;1H[34m#script takes two parameters[m[3;29H[K[4;1H[34m#$1: [m[4;6H[K[4;6H[?25h[?25l[34mThe absolute path to your weka installation
+#$2: The absolute path t[m[5;25H[K[5;25H[?25h[?25l[34mo the directory with the classes and files to train upon[m[6;1H[K[7;1H[38;5;130mcd[m [35m$1[m[7;6H[K[8;1He[8;2H[K[8;2H[?25h[?25l[38;5;130mexport[m [36mCLASSPATH[m=[35m$CLASSPATH[m:[35m`[m[38;5;130mpwd[m[35m`[m/weka.jar:[35m`[m[38;5;130mpwd[m[35m`[m/libsvm.jar
+java w[9;7H[K[9;7H[?25h[?25leka.core.converters.TextDirectoryLoader [35m-dir[m [35m$2[m [38;5;130m>[m text_example.ar[?25h[?25lff
+java [35m-Xmx[m1024m weka.filters.unsupervised.attribute.StringToWo[10;62H[K[10;62H[?25h[?25lrdVector  [35m-i[m text_example.arff [35m-o[m text_examm[11;1Hple_training.arff [35m-M[m [11;22H[K[11;22H[?25h[?25l[31m2[m
+java [35m-Xmx[m1024m  weka.classifiers.meta.ClassificationViaRegres[12;62H[K[12;62H[?25h[?25lsion [35m-W[m weka.classifiers.trees.M5P [35m-num-decc[13;1Himal-places[m [31m4[m  [35m-t[m  t[13;21H[K[13;21H[?25h[?25lext_example_training.arff [35m-d[m text_example_training.model [35m-c[m [31m1[?25h[?25l[m[44;87H11,186[13;82H[?25h[44;1H[K[13;81H[?25l[44;77H^[[13;81H[44;77H  [13;82H[44;87H11,185[8CAll[13;81H[?25h[?25l[44;77H:[13;81H[44;77H[K[44;1H:[?2004h[?25hwq[?25l[?2004l"text_binary-classify.sh" [New] 11L, 645C written[23;2t[23;1t
+[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ chmod +x text_binary_classify.sh 
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ ./text_binary_classify.sh $HOME/weka-3-8-5 $data[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pchmod +x text_binary_classify.sh [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pvi text_binary-classify.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K[K[K./text_binary_classify.sh $HOME/weka-3-8-5 $data_without_tweet
+java.lang.Exception: No value given for -dir option.
+	at weka.core.Utils.getOption(Utils.java:611)
+	at weka.core.converters.TextDirectoryLoader.setOptions(TextDirectoryLoader.java:212)
+	at weka.core.converters.TextDirectoryLoader.run(TextDirectoryLoader.java:682)
+	at weka.core.converters.TextDirectoryLoader.main(TextDirectoryLoader.java:649)
+
+Unable to determine structure as arff (Reason: java.io.IOException: premature end of file, read Token[EOF], line 1).
+Filter options:
+
+-C
+	Output word counts rather than boolean word presence.
+
+-R <index1,index2-index4,...>
+	Specify list of string attributes to convert to words (as weka Range).
+	(default: select all string attributes)
+-V
+	Invert matching sense of column indexes.
+-P <attribute name prefix>
+	Specify a prefix for the created attribute names.
+	(default: "")
+-W <number of words to keep>
+	Specify approximate number of word fields to create.
+	Surplus words will be discarded..
+	(default: 1000)
+-prune-rate <rate as a percentage of dataset>
+	Specify the rate (e.g., every 10% of the input dataset) at which to periodically prune the dictionary.
+	-W prunes after creating a full dictionary. You may not have enough memory for this approach.
+	(default: no periodic pruning)
+-T
+	Transform the word frequencies into log(1+fij)
+	where fij is the frequency of word i in jth document(instance).
+
+-I
+	Transform each word frequency into:
+	fij*log(num of Documents/num of documents containing word i)
+	  where fij if frequency of word i in jth document(instance)
+-N
+	Whether to 0=not normalize/1=normalize all data/2=normalize test data only
+	to average length of training documents (default 0=don't normalize).
+-L
+	Convert all tokens to lowercase before adding to the dictionary.
+-stopwords-handler
+	The stopwords handler to use (default Null).
+-stemmer <spec>
+	The stemming algorithm (classname plus parameters) to use.
+-M <int>
+	The minimum term frequency (default = 1).
+-O
+	If this is set, the maximum number of words and the 
+	minimum term frequency is not enforced on a per-class 
+	basis but based on the documents in all the classes 
+	(even if a class attribute is set).
+-tokenizer <spec>
+	The tokenizing algorithm (classname plus parameters) to use.
+	(default: weka.core.tokenizers.WordTokenizer)
+-dictionary <path to save to>
+	The file to save the dictionary to.
+	(default is not to save the dictionary)
+-binary-dict
+	Save the dictionary file as a binary serialized object
+	instead of in plain text form. Use in conjunction with
+	-dictionary
+
+General options:
+
+-h
+	Get help on available options.
+	(use -b -h for help on batch mode.)
+-i <file>
+	The name of the file containing input instances.
+	If not supplied then instances will be read from stdin.
+-o <file>
+	The name of the file output instances will be written to.
+	If not supplied then instances will be written to stdout.
+-c <class index>
+	The number of the attribute to use as the class.
+	"first" and "last" are also valid entries.
+	If not supplied then no class is assigned.
+-decimal <integer>
+	The maximum number of digits to print after the decimal
+	place for numeric values (default: 6)
+
+
+Weka exception: Can't open file text_example_training.arff.
+
+General options:
+
+-h or -help
+	Output help information.
+-synopsis or -info
+	Output synopsis for classifier (use in conjunction  with -h)
+-t <name of training file>
+	Sets training file.
+-T <name of test file>
+	Sets test file. If missing, a cross-validation will be performed
+	on the training data.
+-c <class index>
+	Sets index of class attribute (default: last).
+-x <number of folds>
+	Sets number of folds for cross-validation (default: 10).
+-no-cv
+	Do not perform any cross validation.
+-force-batch-training
+	Always train classifier in batch mode, never incrementally.
+-split-percentage <percentage>
+	Sets the percentage for the train/test set split, e.g., 66.
+-preserve-order
+	Preserves the order in the percentage split.
+-s <random number seed>
+	Sets random number seed for cross-validation or percentage split
+	(default: 1).
+-m <name of file with cost matrix>
+	Sets file with cost matrix.
+-continue-iterating
+	Continue training an IterativeClassifier model that has
+	been loaded via -l.
+-clean-up
+	Reduce storage size of an loaded IterativeClassifier
+	after iterating. This effectively 'freezes' the model, and no further
+	iteration is then possible.
+-toggle <comma-separated list of evaluation metric names>
+	Comma separated list of metric names to toggle in the output.
+	All metrics are output by default with the exception of 'Coverage' and 'Region size'.
+	Available metrics:
+	Correct,Incorrect,Kappa,Total cost,Average cost,KB relative,KB information,
+	Correlation,Complexity 0,Complexity scheme,Complexity improvement,
+	MAE,RMSE,RAE,RRSE,Coverage,Region size,TP rate,FP rate,Precision,Recall,
+	F-measure,MCC,ROC area,PRC area
+-l <name of input file>
+	Sets model input file. In case the filename ends with '.xml',
+	a PMML file is loaded or, if that fails, options are loaded
+	from the XML file.
+-d <name of output file>
+	Sets model output file. In case the filename ends with '.xml',
+	only the options are saved to the XML file, not the model.
+-v
+	Outputs no statistics for training data.
+-o
+	Outputs statistics only, not the classifier.
+-output-models-for-training-splits
+	Output models for training splits if cross-validation or percentage-split evaluation is used.
+-do-not-output-per-class-statistics
+	Do not output statistics for each class.
+-k
+	Outputs information-theoretic statistics.
+-classifications "weka.classifiers.evaluation.output.prediction.AbstractOutput + options"
+	Uses the specified class for generating the classification output.
+	E.g.: weka.classifiers.evaluation.output.prediction.PlainText
+-p range
+	Outputs predictions for test instances (or the train instances if
+	no test instances provided and -no-cv is used), along with the 
+	attributes in the specified range (and nothing else). 
+	Use '-p 0' if no attributes are desired.
+	Deprecated: use "-classifications ..." instead.
+-distribution
+	Outputs the distribution instead of only the prediction
+	in conjunction with the '-p' option (only nominal classes).
+	Deprecated: use "-classifications ..." instead.
+-r
+	Only outputs cumulative margin distribution.
+-xml filename | xml-string
+	Retrieves the options from the XML-data instead of the command line.
+-threshold-file <file>
+	The file to save the threshold data to.
+	The format is determined by the extensions, e.g., '.arff' for ARFF 
+	format or '.csv' for CSV.
+-threshold-label <label>
+	The class label to determine the threshold data for
+	(default is the first label)
+-no-predictions
+	Turns off the collection of predictions in order to conserve memory.
+
+Options specific to weka.classifiers.meta.ClassificationViaRegression:
+
+-W <classifier name>
+	Full name of base classifier.
+	(default: weka.classifiers.trees.M5P)
+-output-debug-info
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-do-not-check-capabilities
+	If set, classifier capabilities are not checked before classifier is built
+	(use with caution).
+-num-decimal-places
+	The number of decimal places for the output of numbers in the model (default 2).
+-batch-size
+	The desired batch size for batch prediction  (default 100).
+
+Options specific to classifier weka.classifiers.trees.M5P:
+
+-N
+	Use unpruned tree/rules
+-U
+	Use unsmoothed predictions
+-R
+	Build regression tree/rule rather than a model tree/rule
+-M <minimum number of instances>
+	Set minimum number of instances per leaf
+	(default 4)
+-output-debug-info
+	If set, classifier is run in debug mode and
+	may output additional info to the console
+-do-not-check-capabilities
+	If set, classifier capabilities are not checked before classifier is built
+	(use with caution).
+-num-decimal-places
+	The number of decimal places for the output of numbers in the model (default 4).
+-batch-size
+	The desired batch size for batch prediction  (default 100).
+-L
+	Save instances at the nodes in
+	the tree (for visualization purposes)
+
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ ./text_binary_classify.sh $HOME/weka-3-8-5 $HOME/a5/data_without_tweet
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by weka.core.WekaPackageClassLoaderManager (file:/home/lis/weka-3-8-5/weka.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of weka.core.WekaPackageClassLoaderManager
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by weka.core.WekaPackageClassLoaderManager (file:/home/lis/weka-3-8-5/weka.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of weka.core.WekaPackageClassLoaderManager
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Dec 01, 2021 5:19:50 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+Dec 01, 2021 5:19:50 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Dec 01, 2021 5:19:50 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+Dec 01, 2021 5:19:50 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+
+Options: -W weka.classifiers.trees.M5P -num-decimal-places 4 
+
+=== Classifier model (full training set) ===
+
+Classification via Regression
+
+Classifier for class with index 0:
+
+M5 pruned model tree:
+(using smoothed linear models)
+LM1 (291/91.655%)
+
+LM num: 1
+@@class@@ = 
+	-0.193 * />I 
+	+ 0.1196 * an 
+	- 0.2782 * if 
+	- 0.1102 * in 
+	- 0.1242 * s 
+	+ 0.1659 * story 
+	- 0.1968 * until 
+	+ 0.1071 * was 
+	- 0.2044 * way 
+	+ 0.104 * you 
+	+ 0.4295
+
+Number of Rules : 1
+
+Classifier for class with index 1:
+
+M5 pruned model tree:
+(using smoothed linear models)
+LM1 (291/91.655%)
+
+LM num: 1
+@@class@@ = 
+	0.193 * />I 
+	- 0.1196 * an 
+	+ 0.2782 * if 
+	+ 0.1102 * in 
+	+ 0.1242 * s 
+	- 0.1659 * story 
+	+ 0.1968 * until 
+	- 0.1071 * was 
+	+ 0.2044 * way 
+	- 0.104 * you 
+	+ 0.5705
+
+Number of Rules : 1
+
+
+
+Time taken to build model: 3.29 seconds
+
+Time taken to test model on training data: 0.04 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         209               71.8213 %
+Incorrectly Classified Instances        82               28.1787 %
+Kappa statistic                          0.308 
+Mean absolute error                      0.3822
+Root mean squared error                  0.4334
+Relative absolute error                 85.0708 %
+Root relative squared error             91.4828 %
+Total Number of Instances              291     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.394    0.115    0.639      0.394    0.487      0.325    0.749     0.561     UNHELPFUL_noTweet
+                 0.885    0.606    0.739      0.885    0.806      0.325    0.749     0.860     HELPFUL_noTweet
+Weighted Avg.    0.718    0.439    0.705      0.718    0.697      0.325    0.749     0.759     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  39  60 |   a = UNHELPFUL_noTweet
+  22 170 |   b = HELPFUL_noTweet
+
+Time taken to perform cross-validation: 21.77 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         169               58.0756 %
+Incorrectly Classified Instances       122               41.9244 %
+Kappa statistic                          0.0231
+Mean absolute error                      0.4362
+Root mean squared error                  0.5015
+Relative absolute error                 97.0738 %
+Root relative squared error            105.8521 %
+Total Number of Instances              291     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.293    0.271    0.358      0.293    0.322      0.023    0.552     0.369     UNHELPFUL_noTweet
+                 0.729    0.707    0.667      0.729    0.697      0.023    0.552     0.716     HELPFUL_noTweet
+Weighted Avg.    0.581    0.559    0.562      0.581    0.569      0.023    0.552     0.598     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  29  70 |   a = UNHELPFUL_noTweet
+  52 140 |   b = HELPFUL_noTweet
+
+]0;lis@f6linux11: ~/a5[01;32mlis@f6linux11[00m:[01;34m~/a5[00m$ exit
+
+Script done on 2021-12-01 05:26:49+00:00 [COMMAND_EXIT_CODE="0"]
