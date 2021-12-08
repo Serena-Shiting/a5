@@ -1,0 +1,401 @@
+Script started on 2021-12-01 05:02:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="104" LINES="44"]
+
+(1)download Weka
+
+
+(2)
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ cd ..
+]0;lis@f6linux11: ~lis@f6linux11:~$ cd weka-3-8-5
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ export CLASSPATH=$CLASSPATH:`pwd`/weka.jar:`pwd`/libsvm.jar
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ cd a5
+bash: cd: a5: No such file or directory
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ cd /[K~/a5
+]0;
+
+(3)
+lis@f6linux11: ~/a5lis@f6linux11:~/a5$ java weka.core.converters.TextDirectoryLoader -dir data > data.arff 
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ head - 20 data.arff 
+==> standard input <==
+^C
+
+(4)instead of using vi, I use head to check if everything goes well
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ head - 20 data.arff [1@n
+@relation _home_lis_a5_data
+
+@attribute text string
+@attribute @@class@@ {REVIEWS_UNHELPFUL,REVIEWS}
+
+@data
+
+'Thi book start  bang never let   Dick Franci  novel admittedly formulaic     winn formula sure  end   bit unrealistic   what?  life there   time be seriou  time lo yourself   excit story  interest main character \n',REVIEWS_UNHELPFUL
+' believe   fair  say  person get   book  trad  lot   ability  understand relate  read degree new information gel already consider   true  Hav said that    glad  allow - review  book  stop  purcha    interest   day trad -mini future  Other book  read relat  Elliott wave only provid minimal general guidance   only book  Elliott wave  found invaluable   took  few reading practice but  low behold   now  often  scrutinize  wave determine     impulse wave   correction  beauty    allow  know  still   correction   trend resum   allow  know  there  5th wave failure   form  correction  still develop   end   5th wave when market  spik  down  eventually tell   new thrust  direction  trend  part  trend possibly end  5th wave  whether   just  part   diagonal triangle    long way    master   often see  wave pattern appreciate  go    all  market make more sense   now  reviewer comment do  possible  intraday chart    disagree  Even small  wave take 30 minute  hour  develop  Once market made enough   move  recognize correction only ne  couple  minute  figure  even  consult book     short    impres consider best book  trad  ever read \n',REVIEWS
+' enjoy  well told yarn  intrigue told  skillfully able  predict end   really good who-done-   you \n',REVIEWS_UNHELPFUL
+' name indicate  book explain science behind Phillip Pullman  Dark Material trilogy  author refer  passage trilogy then explain science behind them u easily comprehendable example analogie  Chapter speak  everyth Northern Light  Amber Spyglas  non-fiction book   reference fictitiou Dark Material  science explain  though   complex   understood easily   lay reader  recommend read Dark Material trilogy  Phillip Pullman before read book  understand reference context  example given  book   really lik analogie because made science easy  understand  even those  understand  studi Physic  Chemistry  Astronomy behind many science fiction novel   especially enjoy depth  history author gave  different concept  such  explanation appearance  Northern Light  Whether look  understand Dark Material   better understand subject  science clas  book fulfill duty  explain science  Eventhough   usually enjoy science fiction   enjoy book educational value      \n',REVIEWS
+' read book first time   4th grade Tier 4 clas still remember  felt when  read last line  Chill went over  body   upset there wasn  more  book! Now  13 year later   still get chill  end  whole book  suspenseful myseteriou      just wonderful  sad th   seem  few people read    recommend EVERYONE read      light read  incredibly engag  Frank Bonham such  wonderfully creative mind!    funny brushe  very seriou subject  book  whole package! try Forever Formula  also  Bonham !\n',REVIEWS_UNHELPFUL
+' highly recommend get book  Just make sure purchase ISBN  0800757394  black cover yellow writ  other edition   modern    update    power  Bosworth  teach stripp  \n',REVIEWS
+'the book  good condition describe exactly  want  Thank you \n',REVIEWS_UNHELPFUL
+'Thi   great bible  preach - inclusive language - easy  read translation  that closely mirror NIV  soft cover allow   lie well  hand There  study aid  bible - except typical    weight measure    found  back  every bible However    fool  description - gett     leather bound    bible  even close Zondervan  own website tell TNIV bible    Italian Duo-tone    cover   these bible were Leather  say    Leather    What  Italian Duo-tone  ask? Good question  Write  email  Zondervan probably won  write back  truth  Italian Duo-tone  Zondervan  fancy way  say    rubber    Ye  rubber   actually  mixture  rubber polyester Italian Duo-tone  book binder version     naugohide     other word   man-made leather The sad th   pay  leather cover    very least  bond leather cover  gett manufactur imitation leather made proces polyester only look feel like leather \n',REVIEWS
+'Mountford  prose set vivid scene historical research  ponie  evident  skillfully weave history modern-day question  give   mystery keep  read  soon forgotten \n',REVIEWS_UNHELPFUL
+' only purchase book  rubber stamp  then   purchase    everyth  beginner need plu project  please  experienc stamper  There beautiful picture detail instruction    book  look forward  u over over again \n',REVIEWS
+'Thi  third volume   three-volume set    The Teaching  Kirpal Singh     set  excerpt other book reorganiz  topic such  meditation  diet  marriage etc  allow reader  research area  life   concern     The New Life    [volume 3] focuse  inner-spiritual life outer-worldly life carri  once  person embark onto spiritual path \n',REVIEWS_UNHELPFUL
+'What happen when  purple rotund hippontimu hiccup  fearce blast everyth everyone around him into flight? Humor  that  what Author illustrator Aaron Zenz present  whimsical rhyme  epic proportion  first children  picture book    The Hiccupontamu     Beautifully illustrat      Suess-like manner  story create many word send Daniel Webster reel    There  hippopotamusWho hiccupp quite--lotamusAnd every time  got emusHe  fall upon bottomu    Zenz render  humorou cartoon illustration u color pencil  u 119  all  Spr Lake  Michigan resident hold  art degree Hillsdale College     The Hiccupotamu    took eight year  complete  publish  Chicago-ba Dog  Hat Children  Publish The print quality  book  ultra-professional bring Zenz  pressure-appli pencil  vibrant life    often  competitive page quandary reader  love most; story  drawing  chemistry between text picture  remarkable  rival best children  book ever publish Aaron Zenz enjoy communicat kid  age through art lesson  home school children Sunday School classe  outreach  children only grow jewel   book \n',REVIEWS
+' haven  read  good book   long time Jada definitely quench urge  book kept  hook whole time  character were  easy  relate   entertain  Alexander add  little humor  make  more interest   can  wait second book!@\n',REVIEWS_UNHELPFUL
+
+
+(5)
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ java -Xmx1024m weka.filters.unsupervised.attribute.StringToWordVector  -i data.arff -o data_training.arff -M 2
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by weka.core.WekaPackageClassLoaderManager (file:/home/lis/weka-3-8-5/weka.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of weka.core.WekaPackageClassLoaderManager
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ vi data_training.arffjava -Xmx1024m weka.filters.unsupervised.attribute.StringToWordVector  -i data.arff -o data_training.arff -M 2[Ahead -n 20 data.arff [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ 
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ 
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ 
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ 
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ 
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ 
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ 
+
+
+
+
+(6)
+ARFF files have two sections. The first part is the Header information, and the second part is the Data information. The Header of the ARFF file contains the name of the class(REVIEWS_UNHELPFUL,REVIEWS), a list of the attributes, and their data and how many times appears
+
+
+
+
+
+(7)
+lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ vi data_training.arff[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kjava -Xmx1024m  weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.trees.M5P -num-decimal-places 4  -t  ~/a5/data_training.arff -d data_training.model -c 1
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by weka.core.WekaPackageClassLoaderManager (file:/home/lis/weka-3-8-5/weka.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of weka.core.WekaPackageClassLoaderManager
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Dec 01, 2021 5:06:20 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+Dec 01, 2021 5:06:20 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Dec 01, 2021 5:06:20 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+Dec 01, 2021 5:06:20 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+
+Options: -W weka.classifiers.trees.M5P -num-decimal-places 4 
+
+=== Classifier model (full training set) ===
+
+Classification via Regression
+
+Classifier for class with index 0:
+
+M5 pruned model tree:
+(using smoothed linear models)
+LM1 (197/81.095%)
+
+LM num: 1
+@@class@@ = 
+	-0.1703 * - 
+	- 0.2435 * There 
+	+ 0.2715 * author 
+	- 0.2715 * before 
+	+ 0.3574 * best 
+	+ 0.2276 * character 
+	- 0.1824 * found 
+	+ 0.185 * good 
+	+ 0.1583 * just 
+	+ 0.1354 * life 
+	- 0.2105 * many 
+	- 0.2276 * only 
+	- 0.1882 * recommend 
+	- 0.2477 * should 
+	- 0.1819 * time 
+	- 0.2408 * work 
+	+ 0.6232
+
+Number of Rules : 1
+
+Classifier for class with index 1:
+
+M5 pruned model tree:
+(using smoothed linear models)
+LM1 (197/81.095%)
+
+LM num: 1
+@@class@@ = 
+	0.1703 * - 
+	+ 0.2435 * There 
+	- 0.2715 * author 
+	+ 0.2715 * before 
+	- 0.3574 * best 
+	- 0.2276 * character 
+	+ 0.1824 * found 
+	- 0.185 * good 
+	- 0.1583 * just 
+	- 0.1354 * life 
+	+ 0.2105 * many 
+	+ 0.2276 * only 
+	+ 0.1882 * recommend 
+	+ 0.2477 * should 
+	+ 0.1819 * time 
+	+ 0.2408 * work 
+	+ 0.3768
+
+Number of Rules : 1
+
+
+
+Time taken to build model: 2.43 seconds
+
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         153               77.665  %
+Incorrectly Classified Instances        44               22.335  %
+Kappa statistic                          0.5536
+Mean absolute error                      0.3423
+Root mean squared error                  0.3978
+Relative absolute error                 68.6033 %
+Root relative squared error             79.645  %
+Total Number of Instances              197     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.798    0.243    0.750      0.798    0.773      0.555    0.858     0.840     REVIEWS_UNHELPFUL
+                 0.757    0.202    0.804      0.757    0.780      0.555    0.858     0.867     REVIEWS
+Weighted Avg.    0.777    0.221    0.778      0.777    0.777      0.555    0.858     0.854     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 75 19 |  a = REVIEWS_UNHELPFUL
+ 25 78 |  b = REVIEWS
+
+Time taken to perform cross-validation: 13.97 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         113               57.3604 %
+Incorrectly Classified Instances        84               42.6396 %
+Kappa statistic                          0.1541
+Mean absolute error                      0.4393
+Root mean squared error                  0.5115
+Relative absolute error                 88.0203 %
+Root relative squared error            102.3782 %
+Total Number of Instances              197     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.670    0.515    0.543      0.670    0.600      0.158    0.611     0.583     REVIEWS_UNHELPFUL
+                 0.485    0.330    0.617      0.485    0.543      0.158    0.611     0.642     REVIEWS
+Weighted Avg.    0.574    0.418    0.582      0.574    0.570      0.158    0.611     0.614     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 63 31 |  a = REVIEWS_UNHELPFUL
+ 53 50 |  b = REVIEWS
+
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ 
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ 
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ 
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ 
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ 
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ 
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ 
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(8)(9)
+]0;lis@f6linux11: ~/weka-3-8-5lis@f6linux11:~/weka-3-8-5$ cd ~/a5
+
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ vi text_binary-classify.sh
+
+
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ ./text_binary_classify.sh $HOME/weka-3-8-5 $HOME/a5/data_without_tweet
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by weka.core.WekaPackageClassLoaderManager (file:/home/lis/weka-3-8-5/weka.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of weka.core.WekaPackageClassLoaderManager
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by weka.core.WekaPackageClassLoaderManager (file:/home/lis/weka-3-8-5/weka.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of weka.core.WekaPackageClassLoaderManager
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Dec 01, 2021 5:19:50 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+Dec 01, 2021 5:19:50 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Dec 01, 2021 5:19:50 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+Dec 01, 2021 5:19:50 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+
+Options: -W weka.classifiers.trees.M5P -num-decimal-places 4 
+
+=== Classifier model (full training set) ===
+
+Classification via Regression
+
+Classifier for class with index 0:
+
+M5 pruned model tree:
+(using smoothed linear models)
+LM1 (291/91.655%)
+
+LM num: 1
+@@class@@ = 
+	-0.193 * />I 
+	+ 0.1196 * an 
+	- 0.2782 * if 
+	- 0.1102 * in 
+	- 0.1242 * s 
+	+ 0.1659 * story 
+	- 0.1968 * until 
+	+ 0.1071 * was 
+	- 0.2044 * way 
+	+ 0.104 * you 
+	+ 0.4295
+
+Number of Rules : 1
+
+Classifier for class with index 1:
+
+M5 pruned model tree:
+(using smoothed linear models)
+LM1 (291/91.655%)
+
+LM num: 1
+@@class@@ = 
+	0.193 * />I 
+	- 0.1196 * an 
+	+ 0.2782 * if 
+	+ 0.1102 * in 
+	+ 0.1242 * s 
+	- 0.1659 * story 
+	+ 0.1968 * until 
+	- 0.1071 * was 
+	+ 0.2044 * way 
+	- 0.104 * you 
+	+ 0.5705
+
+Number of Rules : 1
+
+
+
+Time taken to build model: 3.29 seconds
+
+Time taken to test model on training data: 0.04 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         209               71.8213 %
+Incorrectly Classified Instances        82               28.1787 %
+Kappa statistic                          0.308 
+Mean absolute error                      0.3822
+Root mean squared error                  0.4334
+Relative absolute error                 85.0708 %
+Root relative squared error             91.4828 %
+Total Number of Instances              291     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.394    0.115    0.639      0.394    0.487      0.325    0.749     0.561     UNHELPFUL_noTweet
+                 0.885    0.606    0.739      0.885    0.806      0.325    0.749     0.860     HELPFUL_noTweet
+Weighted Avg.    0.718    0.439    0.705      0.718    0.697      0.325    0.749     0.759     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  39  60 |   a = UNHELPFUL_noTweet
+  22 170 |   b = HELPFUL_noTweet
+
+Time taken to perform cross-validation: 21.77 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         169               58.0756 %
+Incorrectly Classified Instances       122               41.9244 %
+Kappa statistic                          0.0231
+Mean absolute error                      0.4362
+Root mean squared error                  0.5015
+Relative absolute error                 97.0738 %
+Root relative squared error            105.8521 %
+Total Number of Instances              291     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.293    0.271    0.358      0.293    0.322      0.023    0.552     0.369     UNHELPFUL_noTweet
+                 0.729    0.707    0.667      0.729    0.697      0.023    0.552     0.716     HELPFUL_noTweet
+Weighted Avg.    0.581    0.559    0.562      0.581    0.569      0.023    0.552     0.598     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  29  70 |   a = UNHELPFUL_noTweet
+  52 140 |   b = HELPFUL_noTweet
+
+
+
+
+
+
+
+
+(10)
+Yes, I can see the difference in the training results between using just amazon review_body text, vs. combining the review_body text with twitter tweets. With twitter tweets, the unhelpful review has higher higher TP and FP rates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]0;lis@f6linux11: ~/a5lis@f6linux11:~/a5$ exit
+
+Script done on 2021-12-01 05:26:49+00:00 [COMMAND_EXIT_CODE="0"]
